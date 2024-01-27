@@ -8,11 +8,11 @@
 # https://github.com/P3TERX/Actions-OpenWrt
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
-####################################################################-DHAVE_MAP_SYNC
+####################################################################
 sed -i 's/DHAVE_MAP_SYNC/DHAVE_MAP_SYNC -D_LARGEFILE64_SOURCE/g' package/feeds/packages/xfsprogs/Makefile
 
-
+sed -i 's/PKG_BUILD_DEPENDS:=golang/host/PKG_BUILD_DEPENDS:=golang/host upx/host/g' package/feeds/small8/speedtest-web/Makefile
 
 
 # Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
