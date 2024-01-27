@@ -8,8 +8,8 @@
 # https://github.com/P3TERX/Actions-OpenWrt
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
-####################################################################
-sed -i 's/TARGET_CFLAGS += -DHAVE_MAP_SYNC/TARGET_CFLAGS += -DHAVE_MAP_SYNC -D_LARGEFILE64_SOURCE/' package/feeds/packages/xfsprogs/xfsprogs/Makefile
+####################################################################-DHAVE_MAP_SYNC
+sed -i 's/TARGET_CFLAGS += -DHAVE_MAP_SYNC += -DHAVE_MAP_SYNC -D_LARGEFILE64_SOURCE/' package/feeds/packages/xfsprogs/xfsprogs/Makefile
 
 
 
