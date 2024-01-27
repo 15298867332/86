@@ -9,7 +9,7 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 ####################################################################-DHAVE_MAP_SYNC
-sed -i 's/TARGET_CFLAGS += -DHAVE_MAP_SYNC += -DHAVE_MAP_SYNC -D_LARGEFILE64_SOURCE/' package/feeds/packages/xfsprogs/xfsprogs/Makefile
+sed -i 's/DHAVE_MAP_SYNC/DHAVE_MAP_SYNC -D_LARGEFILE64_SOURCE/g' package/feeds/packages/xfsprogs/xfsprogs/Makefile
 
 
 
