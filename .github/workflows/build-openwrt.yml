@@ -129,7 +129,7 @@ jobs:
       run: |
         cd openwrt
         make defconfig
-        make download -j8 -v8
+        make download -j8 
   
     - name: Compile the firmware
       id: compile
