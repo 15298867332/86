@@ -108,7 +108,12 @@ jobs:
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
-      
+
+    - name: Load custom feeds0
+      run: |
+        cd openwrt
+        echo "src-git small8 https://github.com/kenzok8/small-package" >> ./feeds.conf.default
+        ./scripts/feeds update -a && ./scripts/feeds install -a
     - name: Install feeds1
       run: cd openwrt && rm -rf feeds/packages/lang/golang
     - name: Install feeds2
